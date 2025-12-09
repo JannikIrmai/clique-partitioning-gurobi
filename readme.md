@@ -42,10 +42,10 @@ We run the two ILP solvers with heuristics and cut generation turned on (Heurist
 
 Depicted below are objective values and bounds of the three solvers described above
 
-![30-True](cp-30-True.png)
-![40-False](cp-30-False.png)
-![30-True](cp-40-True.png)
-![40-False](cp-40-False.png)
+| ![30-True](cp-30-True.png) | ![40-False](cp-30-False.png) |
+|----------------------------|------------------------------|
+| ![30-True](cp-40-True.png) | ![40-False](cp-40-False.png) |
+
 
 ### Observations
 
