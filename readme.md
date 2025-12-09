@@ -9,19 +9,25 @@ is maximum.
 ### ILP formulation
 
 The clique partitioning problem can be formulated as the following integer linear program:
+
 $$
-\max \quad \sum_{ij \subseteq V} x_{ij} \cdot c_{ij} \qquad \qquad \qquad \qquad\\
-\text{s.t.} \quad x_{ij} \in \{0, 1\} \qquad \qquad \forall ij \subseteq V \qquad  \\
-\qquad \qquad \quad x_{ij} + x_{jk} - x_{ik} \leq 1 \quad \forall ij \subseteq V, k \in V \setminus ij
+\begin{aligned}
+\max \quad &\sum_{ij \subseteq V} x_{ij} \cdot c_{ij} \\
+\text{s.t.} \quad &x_{ij} \in \{0, 1\} &&\forall ij \subseteq V \qquad  \\
+&x_{ij} + x_{jk} - x_{ik} \leq 1 &&\forall ij \subseteq V, k \in V \setminus ij
+\end{aligned}
 $$
+
 where $x_{ij} = 1$ indicates that $i$ and $j$ are in the same cluster.
 
 ### Two-partition inequalities 
 
 For any two disjoint node subsets $A, B \subseteq V$, $A \cap B = \emptyset$, the two-partition inequality [2] with respect to $A$ and $B$ is defined as 
+
 $$
-    \sum_{i \in A, j \in B}  x_{ij} - \sum_{ij \subseteq A} x_{ij} - \sum_{ij \subseteq B} x_{ij} \leq \min\{|A|, |B|\} \enspace .
+\sum_{i \in A, j \in B}  x_{ij} - \sum_{ij \subseteq A} x_{ij} - \sum_{ij \subseteq B} x_{ij} \leq \min\{|A|, |B|\} \enspace .
 $$
+
 It is valid for the clique partitioning problem and defines a facet of the clique partitioning polytope if $|A| \neq |B|$.
 
 No exact algorithm for separating two-partition inequalities is known but [3] propose a heuristic that is effective in practice.
