@@ -67,6 +67,10 @@ Adding all triangle inequalities to the LP solver upfront, does not significantl
 As far as I know, it is not possible to remove constraints or user-cuts from an ILP.
 
 
+## Further discussion
+
+Further discussion of this can be found in the gurobi community [forum](https://support.gurobi.com/hc/en-us/community/posts/25514581728401-Best-practice-for-implementing-branch-and-cut-algorithm-with-gurobi?page=1#community_comment_41752923819025).
+
 
 ## References
 
